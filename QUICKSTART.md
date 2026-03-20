@@ -1,125 +1,125 @@
-# 🚀 Quick Start Guide
+# 🚀 快速开始指南
 
-Get started with Cursor Automation Skill in under 5 minutes!
+5 分钟内快速上手 Cursor 自动化技能！
 
-## One-Line Installation
-
-```bash
-# Clone and install with one command
-git clone https://github.com/nice010/openclaw-cursor-automation.git && cd openclaw-cursor-automation && bash scripts/install.sh
-```
-
-Or use the direct install script:
+## 一键安装
 
 ```bash
-# Direct install (requires curl)
-curl -s https://raw.githubusercontent.com/nice010/openclaw-cursor-automation/main/scripts/install.sh | bash
+# 克隆并安装
+git clone https://github.com/zhan69820/openclaw-cursor-automation.git && cd openclaw-cursor-automation && bash scripts/install.sh
 ```
 
-## Step-by-Step Installation
+或使用直接安装脚本：
 
-### 1. Install System Dependencies
+```bash
+# 直接安装（需要 curl）
+curl -s https://raw.githubusercontent.com/zhan69820/openclaw-cursor-automation/main/scripts/install.sh | bash
+```
+
+## 分步安装
+
+### 1. 安装系统依赖
 ```bash
 sudo apt update
 sudo apt install xdotool xclip
 ```
 
-### 2. Clone the Repository
+### 2. 克隆仓库
 ```bash
-git clone https://github.com/nice010/openclaw-cursor-automation.git
+git clone https://github.com/zhan69820/openclaw-cursor-automation.git
 cd openclaw-cursor-automation
 ```
 
-### 3. Run Installation Script
+### 3. 运行安装脚本
 ```bash
 bash scripts/install.sh
 ```
 
-### 4. Verify Installation
+### 4. 验证安装
 ```bash
-# Check service status
+# 检查服务状态
 curl http://127.0.0.1:8000/
 
-# Test the skill
+# 测试技能
 curl -X POST http://127.0.0.1:8000/operate_cursor \
   -H "Content-Type: application/json" \
   -d '{"content": "Hello Cursor!", "mode": "composer"}'
 ```
 
-## 🎯 First Use
+## 🎯 首次使用
 
-1. **Open Cursor Editor** and maximize the window
-2. **Test with OpenClaw**:
+1. **打开 Cursor 编辑器** 并最大化窗口
+2. **通过 OpenClaw 测试**：
    ```
-   User: 帮我写一个简单的Python函数
-   Assistant: 好的，我来帮你写一个Python函数。
+   用户: 帮我写一个简单的Python函数
+   助手: 好的，我来帮你写一个Python函数。
    ```
-3. **Watch Cursor** automatically open composer and generate code
+3. **观察 Cursor** 自动打开 composer 并生成代码
 
-## 📋 Common Commands
+## 📋 常用命令
 
-### Service Management
+### 服务管理
 ```bash
-# Start service
+# 启动服务
 bash scripts/start_service.sh
 
-# Stop service
+# 停止服务
 pkill -f cursor_handler.py
 
-# Check status
+# 检查状态
 curl http://127.0.0.1:8000/
 
-# View logs
+# 查看日志
 tail -f /tmp/cursor_service.log
 ```
 
-### Skill Testing
+### 技能测试
 ```bash
-# Test with curl
+# 使用 curl 测试
 curl -X POST http://127.0.0.1:8000/operate_cursor \
   -H "Content-Type: application/json" \
-  -d '{"content": "Write a function to calculate factorial in Python", "mode": "composer"}'
+  -d '{"content": "写一个计算阶乘的Python函数", "mode": "composer"}'
 ```
 
-## 🐛 Quick Troubleshooting
+## 🐛 快速排错
 
-### Issue: "Service not responding"
+### 问题：服务无响应
 ```bash
-# Restart service
+# 重启服务
 pkill -f cursor_handler.py
 bash scripts/start_service.sh
 ```
 
-### Issue: "Cursor not opening"
-- Make sure Cursor is the active, maximized window
-- Test manually: `xdotool key ctrl+i`
+### 问题：Cursor 无响应
+- 确保 Cursor 是活动窗口且已最大化
+- 手动测试：`xdotool key ctrl+i`
 
-### Issue: "Clipboard not working"
+### 问题：剪贴板不工作
 ```bash
-# Test clipboard
+# 测试剪贴板
 echo "test" | xclip -selection clipboard
 xclip -selection clipboard -o
 ```
 
-## 🔗 Useful Links
+## 🔗 常用链接
 
-- **Full Documentation**: [README.md](README.md)
-- **Examples**: [EXAMPLES.md](EXAMPLES.md)
-- **Install Script**: [scripts/install.sh](scripts/install.sh)
-- **GitHub Repository**: https://github.com/nice010/openclaw-cursor-automation
+- **完整文档**: [README.md](README.md)
+- **使用示例**: [EXAMPLES.md](EXAMPLES.md)
+- **安装脚本**: [scripts/install.sh](scripts/install.sh)
+- **GitHub 仓库**: https://github.com/zhan69820/openclaw-cursor-automation
 
-## ⚡ Pro Tips
+## ⚡ 使用技巧
 
-1. **Keep Cursor maximized** for best results
-2. **Use composer mode** for code generation
-3. **Use chat mode** for explanations and debugging
-4. **Check logs** if something doesn't work: `tail -f /tmp/cursor_service.log`
+1. **保持 Cursor 最大化** 以获得最佳效果
+2. **使用 composer 模式** 进行代码生成
+3. **使用 chat 模式** 进行解释和调试
+4. **查看日志** 如果出现问题：`tail -f /tmp/cursor_service.log`
 
-## 🆘 Need Help?
+## 🆘 需要帮助？
 
-- **GitHub Issues**: https://github.com/nice010/openclaw-cursor-automation/issues
-- **Test Installation**: `bash test_installation.sh`
+- **GitHub Issues**: https://github.com/zhan69820/openclaw-cursor-automation/issues
+- **测试安装**: `bash test_installation.sh`
 
 ---
 
-**Enjoy automated coding with Cursor! 🎉**
+**享受 Cursor 自动化编程的乐趣！🎉**
