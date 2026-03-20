@@ -1,0 +1,15 @@
+# Python dependencies for Cursor Automation Skill
+# Note: Most dependencies are system packages (xdotool, xclip)
+
+# Python standard library only - no external packages required
+# The service uses only Python standard libraries:
+# - http.server
+# - json
+# - subprocess
+# - threading
+# - os
+# - time
+# - sys
+
+# System dependencies (install via apt):
+# sudo apt install xdotool xclip python3
